@@ -1,10 +1,12 @@
 require('dotenv').config();
+const path = require('path');
 
 const express = require('express');
 const app = express();
 
 const { knex } = require('./knex');
 
+app.use(express.static(path.join(__dirname, '../build')));
 app.use(express.json());
 
 app.get('/api/notes', (_, res) => {
