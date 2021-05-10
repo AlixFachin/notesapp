@@ -17,5 +17,19 @@ module.exports = {
       directory: './seeds/'
     }
   },
+  production: {
+    client: 'pg',
+    connection: {
+      connectionString: process.env.DATABASE_URL,
+      ssl: { rejectUnauthorized: false },
+    },
+    migrations: {
+      tableName: 'knex_migrations'
+    },
+    seeds: {
+      directory: './seeds/'
+    }
+
+  }
 
 };
