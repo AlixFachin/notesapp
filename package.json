@@ -24,7 +24,8 @@
     "hack-server": "nodemon server/server.js",
     "make-migration": "npx knex --knexfile knexfile.js migrate:make",
     "migrate": "npx knex --knexfile knexfile.js migrate:latest",
-    "rollback": "npx knex --knexfile knexfile.js migrate:rollback"
+    "rollback": "npx knex --knexfile knexfile.js migrate:rollback",
+    "seed": "npx knex --knexfile knexfile.js seed:run"
   },
   "proxy": "http://localhost:4000",
   "eslintConfig": {
