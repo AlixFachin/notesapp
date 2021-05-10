@@ -11,7 +11,7 @@ app.use(express.json());
 
 // READ ALL NOTES
 app.get('/api/notes', (_, res) => {
-  knex('notes').select('*').then((data) => {
+  knex('notes').select('*').orderBy('id','desc').then((data) => {
     res.status(201).send(data);
   }).catch((error) => {
     console.log(`Error in the DB fetch ${error}`);

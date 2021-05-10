@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+.App button {
+  font-size: larger;
+  padding: 3px;
+  margin: 1px 5px 1px 5px;
+}
+
+.App button:hover {
+  background-color: navy;
+  color: white;
+}
+
 .App-header {
   background-color: navy;
   min-height: 3em;
@@ -20,7 +31,25 @@
   align-items: flex-start;
   justify-content: space-evenly;
   padding: 5px;
+}
 
+aside, main {
+  margin: 10px 5px 10px 5px;
+}
+
+
+@media (max-width: 400px) {
+  #mainContainer {
+    flex-direction: column-reverse;
+  }
+  h1 {
+    font-size: x-large;
+  }
+  
+}
+
+#noteList {
+  padding: 5px;
 }
 
 aside {
